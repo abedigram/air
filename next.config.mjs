@@ -3,6 +3,11 @@ import nextPwa from "next-pwa";
 
 const withPWA = nextPwa({
   dest: "public",
+  disable: false, //process.env.NODE_ENV === "development"
+  cacheOnFrontEndNav: true,
+  reloadOnOnline: true,
+  cacheStartUrl: true,
+  //   runtimeCaching, //TODO
 });
 
 const nextConfig = withPWA({
